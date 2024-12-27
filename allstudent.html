@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Student Data</h1>
+
+    <script>
+        fetch("http://localhost:3000")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+
+                const table = document.createElement('table');
+                const tableBody = document.createElement('tbody');
+
+                // Add table headers
+                const headerRow = document.createElement('tr');
+                ['Name', 'Email', 'Address', 'Password'].forEach(header => {
+                    const th = document.createElement('th');
+                    th.textContent = header;
+                    headerRow.appendChild(th);
+                });
+                table.appendChild(headerRow);
+
+                // Add table rows
+                data.forEach(person => {
+                    const row = document.createElement('tr');
+
+                    const nameCell = document.createElement('td');
+                    const emailCell = document.createElement('td');
+                    const addressCell = document.createElement('td');
+                    const passwordCell = document.createElement('td');
+
+                    nameCell.textContent = person.name;
+                    emailCell.textContent = person.email;
+                    addressCell.textContent = person.address;
+                    passwordCell.textContent = person.password;
+
+                    row.appendChild(nameCell);
+                    row.appendChild(emailCell);
+                    row.appendChild(addressCell);
+                    row.appendChild(passwordCell);
+
+                    tableBody.appendChild(row);
+                });
+
+                table.appendChild(tableBody);
+                document.body.appendChild(table);
+            });
+    </script>
+</body>
+</html>

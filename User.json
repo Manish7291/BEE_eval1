@@ -1,0 +1,62 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "address": "123 Main Street",
+    "password": "password123"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "address": "456 Oak Avenue",
+    "password": "securepassword"
+  },
+  {
+    "name": "Manish Kaushik",
+    "email": "abc@gmail.com",
+    "address": "new town",
+    "password": "pass123"
+  },
+  {
+    "name": "Krish Malik",
+    "email": "xyz@gmail.com",
+    "address": "bew town",
+    "password": "pass123"
+  },
+  {
+    "name": "Krish Malik",
+    "email": "xyz@gmail.com",
+    "address": "bew town",
+    "password": "pass123"
+  },
+  {
+    "name": "Laksh Garg",
+    "email": "abc@gmail.com",
+    "address": "new town",
+    "password": "pass123"
+  },
+  {
+    "name": "Kushagra Pandey",
+    "email": "xyz@gmmail.com",
+    "address": "new town",
+    "password": "pass123"
+  },
+  {
+    "name": "last",
+    "email": "last@gmail.com",
+    "address": "new add",
+    "password": "add12345"
+  },
+  {
+    "name": "n1",
+    "email": "manish6239@gmail.com",
+    "address": "hugeuywfguy",
+    "password": "uyeywgfuyew"
+  },
+  {
+    "name": "vikas ",
+    "email": "manish@gmail.com",
+    "address": "hiww",
+    "password": "efwwef"
+  }
+]
